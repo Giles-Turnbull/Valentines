@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap" rel="stylesheet">
+    <link href='styles/general.css' rel='stylesheet' type='text/css'>
+    <link href='styles/heart.css' rel='stylesheet' type='text/css'>
+    <link href='styles/mixtape.css' rel='stylesheet' type='text/css'>
+    <link href='styles/seatChoose.css' rel='stylesheet' type='text/css'>
+    <link href='styles/card.css' rel='stylesheet' type='text/css'>
+    <link href='styles/present.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="styles/test.css">
+    <script defer src="scripts/app.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container-fluid bg-vid">
+        <video autoplay loop muted>
+            <source src="media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+
+    <section class="hiddenTest">
+      <div class="container-fluid" id="title-page">
+        <div class="container-fluid title"><h1>Happy Valentine's Day</h1></div>
+        <p class="title-desc">This is my take on a virtual Valentine's, and I hope you love it as much as I do.</p> 
+        <p>Take a scroll and you will find a few things I have made for you.</p>
+    </div>
+    </section>
+    <div class="container-fluid" id="place-holder">
+        <!-- Happy Valentines Day! -->
+        <canvas width="400" height="300" id="myLove"></canvas>
+    </div>
+    
+
+    
+      <div class="container-fluid message-one">
+        <section class="hiddenTest2"><b><i>Okay... let's start today with a mixtape of my favourite memories of us!</i><b></section>
+    </div>
+    
+
+    <div class="container-fluid" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="row">
+            <div class="col-md-6 mixtape-main" style="margin-right: 20px;">
+                <div id="turntable">
+                    <div id="table-shadow"></div>
+                    <div id="table-feet"></div>
+                    <div id="wood">
+                      <div id="grain1"></div>
+                      <div id="grain2"></div>
+                      <div id="grain3"></div>
+                      <div id="grain4"></div>
+                      <div id="grain5"></div>
+                      <div id="grain6"></div>
+                    </div>
+                    <div id="wood2">
+                      <div id="grain7"></div>
+                      <div id="grain8"></div>
+                      <div id="grain9"></div>
+                      <div id="grain10"></div>
+                      <div id="grain11"></div>
+                    </div>
+                    <div id="table"></div>
+                    <div id="button"></div>
+                    <div id="disk">
+                      <div id="label"></div>
+                    </div>
+                    <div id="axis-shadow"></div>
+                    <div id="axis"></div>
+                    <div id="arm-shadow"></div>
+                    <div id="weight-shadow"></div>
+                    <div id="base">
+                      <div id="axle-shadow"></div>
+                    </div>
+                    <div id="lever"></div>
+                    <div id="weight"></div>
+                    <div id="axle"></div>
+                    <div id="arm"></div>
+                    <div id="head"></div>
+                  </div>
+            </div>
+                  
+            <div class="col-md-6 mixtape-player mixtape-player" id="player">
+                <div id="audio-controls">
+                    <audio></audio>
+                    <div id="album-art-box">
+                        <!-- Image for the album art -->
+                        <img id="album-art" src="media/Blueberry Eyes - Max.png" alt="Album Art">
+                    </div>
+                    <div id="progress-bar-container">
+                        <!-- Progress bar as a slider -->
+                        <input type="range" id="audio-progress" max="100" value="0">
+                    </div>
+                    <div id="audio-buttons">
+                      <button id="prevButton"><i class="fas fa-step-backward"></i></button>
+                      <button id="toggleButton"><i class="fas fa-play"></i></button>
+                      <button id="nextButton"><i class="fas fa-step-forward"></i></button>                        
+                    </div>
+                    <div id="other-songs">
+                        <!-- Add default values for the first song and album cover -->
+                        <label for="exampleSongs" style="font-family: 'Quicksand', sans-serif;">Mixtape songs:</label>
+                        <select id="exampleSongs" onchange="playExample()" style="width: 20vw;">
+                        <option value="bbe.mp3" selected>Blueberry Eyes - Max</option>
+                        <option value="ms.mp3">Eyes Closed - Mantis State</option>
+                        <option value="wti.mp3">What That I - Hozier</option>
+                        <option value="cw.mp3">Cherry Wine - Hozier</option>
+                        <option value="mon.mp3">Middle of the Night - Elley Duhé</option>
+                        <option value="dc.mp3">Paint the town red - Doja Cat</option>
+                        <option value="snowman.mp3">Snowman - Sia</option>
+                        <option value="gh.mp3">Golden Hour - JVKE</option>
+                        <option value="ln.mp3">Last Night - Morgan Wallen</option>
+                        <option value="skmu.mp3">She Keeps Me up - Nickleback</option>
+                        <!-- Add more songs as needed -->
+                        </select>
+                        <div id="song-description">
+                        <label for="description">Memory</label>
+                        <p id="description">Song description goes here.</p>
+                        </div>   
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid message-nine">
+      "All at once everything looks different, now that I see you." <br>- Rapunzel, Tangled
+      <img src="media/tower.png" alt="Tower" id="tower-image">
+    </div>
+
+    <div class="container-fluid message-two">
+      <section class="hiddenTest"><b><i>I want this to be like a traditional Valentine's day... just a bit more square I guess? I know what to do! How about we take a trip to the cinema. We should probably book a seat though...</i></b></section>
+    </div>
+        
+    <div class="container-fluid cinema">
+        <h2>Find your seats:</h2>
+        <br>
+        <ul class="showcase">
+          <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+          </li>
+          <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+          </li>
+          <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+          </li>
+        </ul>
+      
+        <div class="container screen-container">
+          <div class="screen"></div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+      
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+      
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+          </div>
+      
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+      
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+      
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+          </div>
+        </div>
+    
+      
+        <button id="bookTicketsBtn">Book Tickets</button>
+    </div>
+      
+      <div id="videoContainer" style="display: none;">
+        <video controls autoplay="false">
+            <source src="media/mainvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+  
+    <div class="container-fluid message-three">
+      <section class="hiddenTest2"><b><i>Oh, and look, I got you a card. I am sweet aren't I...</i><b></section>
+        <div class="cloud"></div>
+    </div>
+
+    <div class="container-fluid card-container">
+      <div class="happy-valentines">
+      <div class="valentines-day-card">
+        <div class="clouds"></div>
+        <div class="hearts">
+          <div class="heartOne">
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+          </div>
+          <div class="heartTwo">
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+          </div>
+              <div class="heartThree">
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+          </div>
+           <div class="heartFour">
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+          </div>
+           <div class="heartFive">
+           <div class="left-side"></div>
+            <div class="right-side"></div>
+          </div>
+        </div>
+        <div class="text"><span>Happy Valentine's</br> Day!</div>
+      </div>
+      <p class="hover">- hover over the text -</p>
+  </div>
+</div>
+
+<div class="container-fluid message-four">
+  <section class="hiddenTest2"><b><i>Awww and look I got you a gift too.</i><b></section>
+</div>
+
+<div class="container-fluid giftouter">
+  <div class="row">
+    <data class="col-md-6 mb-6">
+      <h1><b><i>Go on... click it to open</i></b></h1>
+    </data>
+    <div class="giftcontainer col-md-6">
+      <div class="gift">
+        <input type="checkbox" id="click">
+        <label for="click" class="click"></label>
+        <div class="wishes">
+          <!-- Replace "testing" with an image tag -->
+          <img src="media/percy.jpg" alt="Percy" style="width: 100px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid message-five">
+  <section class="hiddenTest"><b><i>What better way to look at flowers than to have a mood board of the amazing ones we have experienced together.</i><b></section>
+</div>
+<img src="media/flowers.jpg" alt="Flowers" class="img-fluid flowers" style="width: 100%; height: auto;">
+
+<div class="container-fluid message-six">
+  "Any day spent with you is my favorite day. So, today is my new favorite day."
+    - Winnie-the-pooh
+  <img src="media/winnie.png" alt="Winnie" class="winnie-image">
+</div>
+
+<div class="container-fluid message-seven">
+  <section class="hiddenTest"><b>And finally, let's finish the night with some star gazing. And what better night to look at the sky than the first night you were mine.<b></section>
+</div>
+<div class="container-fluid star-container" style="padding-bottom: 100px;">
+  <img src="media/stars.png" alt="Flowers" class="img-fluid stars" style="width: auto; height: 80vh;">
+</div>
+
+<div class="container-fluid message-eight">
+  <b><i>Once again, Happy Valentine's Day Summer. I love you.</i><b>
+</div>
+    
+    <script src="scripts/seatChoose.js"></script>
+    <script src="scripts/mixtape.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/heart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'wtp';
+    src: url('../fonts/Piglet.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'disney';
+    src: url('../fonts/disney.ttf') format('truetype');
+}
+
+
+#title-page {
+    padding-top: 10vh;
+    text-align: center;
+    height: 50vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+#title-page h1 {
+    font-family: 'Great Vibes', cursive;
+    color: rgb(193, 0, 0);
+    font-size: 10vw;
+    padding-top: 2vh;
+}
+
+#title-page p {
+    font-family: 'poppins', sans-serif;
+    color: rgb(193, 0, 0);
+    font-size: 1.5vw;
+}
+
+.title-desc {
+    margin-top: 2vh;
+}
+
+#place-holder {
+    height: 50vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-vid video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(70%);
+    object-fit: cover;
+}
+
+
+#title-page,
+#place-holder,
+.message-one {
+    width: 100%;
+    max-width: 100%;
+}
+
+.message-one{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(255, 149, 68);
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5vw;
+    color: white;
+}
+
+.message-two{
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(199, 255, 146);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.5vw;
+    color: rgb(121, 105, 32);
+}   
+
+.message-three {
+    position: relative; /* Ensure positioning context for pseudo-elements */
+    padding-top: 18vh;
+    padding-bottom: 18vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(173, 221, 219);
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    color: rgb(236, 243, 243);
+    overflow: hidden; /* Ensure clouds don't overflow outside the container */
+}
+
+
+.message-four{
+    padding-top: 18vh;
+    padding-bottom: 18vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(255, 134, 138);
+    font-family: 'Kalam', cursive;
+    font-size: 5vw;
+}
+
+.message-five{
+    padding-top: 18vh;
+    padding-bottom: 18vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(255, 190, 170);
+    color: rgb(206, 154, 139);
+    text-shadow: 2px 2px rgba(0, 0, 0, 1);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4vw;
+}
+
+.message-six{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(240, 198, 91);
+    color: rgb(205, 24, 0);
+    font-family: 'wtp';
+    font-size: 4vw;
+}
+
+.message-six {
+    position: relative;
+  }
+  
+  .winnie-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-40px);
+    width: 22vw; /* Adjust the width of the image */
+    height: auto; /* Adjust the height of the image */
+    /* You can add more styles as needed */
+}
+
+.message-nine {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+  
+#tower-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20vw; /* Adjust the width of the image */
+    width: auto; /* Adjust the height of the image */
+    /* You can add more styles as needed */
+}
+
+
+.message-seven{
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Twinkle Star', cursive;
+    font-size: 4vw;
+}
+
+.message-eight{
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(133, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Great Vibes', cursive;
+    font-size: 4vw;
+    align-content: center;
+    text-align: center;
+
+}
+
+.message-nine{
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    padding-left: 20px;
+    padding-right: 60px;
+    background: rgb(190, 150, 202);
+    color: rgb(0, 0, 0);
+    font-family: 'disney';
+    font-size: 2vw;
+}
+
+
+body {
+    margin: 0;
+}
+
+#videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#videoContainer video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background-color: #dcabff;
+    max-width: 100%;
+}
+
+.flowers{
+    border: 60px solid #9fbba3;
+}
+
+.star-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #000000;
+    max-width: 100%;
+}
+
+.hiddenTest{
+    opacity: 0;
+    transition: all 2s;
+    
+}
+
+.show{
+    opacity: 1;
+}
+
+.hiddenTest2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+
+}
+
+.show2{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

@@ -1,0 +1,119 @@
+.giftouter {
+  padding: 5vh 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background: rgb(76, 76, 177);
+  overflow: hidden;
+  font-family: sans-serif;
+  z-index: -2;
+  padding-top: 30vh;
+  padding-bottom: 2vh;
+}
+
+.giftouter h1 {
+  color: white;
+  font-size: 2em;
+  font-family: 'Popins', sans-serif;
+  max-width: 300px;
+  transform: translateX(-20%);
+}
+
+.giftcontainer {
+  position: relative;
+}
+
+.giftcontainer::before {
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  top: 90px;
+  left: -10px;
+}
+
+.gift {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #ff7878;
+  z-index: 1; /* Ensure the present is above the wishes initially */
+}
+
+.gift::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  background: #ff2b2b;
+  left: 62px;
+}
+
+.gift::after {
+  content: '';
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 100px;
+}
+
+#click {
+  display: none;
+}
+
+.click {
+  position: absolute;
+  background-color: #ff6b6b;
+  width: 170px;
+  height: 40px;
+  top: -40px;
+  left: -10px;
+  transform-origin: bottom left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.click::before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 40px;
+  background-color: #df2424;
+  left: 72px;
+}
+
+.click::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #df2424;
+  border-top: 30px solid #df2424;
+  border-left: 20px solid transparent;
+  border-right: 15px solid #df2424;
+  transform: rotate(90deg);
+  left: 65px;
+  top: -47px;
+}
+
+#click:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+  z-index: 0; /* Bring the present behind the wishes when opened */
+}
+
+#click:checked ~ .wishes {
+  transform: translateY(-25vh); /* Move wishes up to reveal them */
+  opacity: 1; /* Make wishes fully visible */
+}
+
+.wishes {
+  position: absolute;
+  transition: transform 0.3s, opacity 0.3s;
+  color: wheat;
+  font-size: 1.5em;
+  left: 20px;
+  opacity: 0; /* Initially set wishes to be invisible */
+}
